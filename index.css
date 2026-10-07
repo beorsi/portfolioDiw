@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #welcome {
@@ -21,4 +22,102 @@ body {
 #presentation {
     position: relative;
     z-index: 1;
+    color: white;
+    left: 6.5vw;
+    top: 20vh;
+}
+#row-buttons{
+    display: flex;
+    gap: 2vw;
+}
+.buttonIntro{
+    display: flex;
+    height:5vh;
+    width: 7vw;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    border: solid lightgray 1px;
+}
+.buttonIntro:hover{
+    cursor:pointer;
+    scale: 1.10;
+    transition: 0.3s;
+    background-color: rgba(211, 211, 211, 0.487);
+}
+
+#sobre-mim {
+    background-color: #080f23;
+    color: white;
+    padding: 40px;
+    min-height: 300px;
+    box-sizing: border-box;
+}
+
+#sobre-mim .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#sobre-mim h2 {
+    margin: 0 0 20px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.foto img {
+    width: 160px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto h3 {
+    font-size: 14px;
+    margin: 0 0 18px;
+    font-family: Arial, sans-serif;
+}
+
+.texto p {
+    color: #9da4b5;
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+    max-width: 780px;
+    font-family: Arial, sans-serif;
+}
+
+.estatisticas {
+    display: flex;
+    gap: 55px;
+    margin-top: 18px;
+}
+
+.estatistica {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.estatistica strong {
+    color: #32e0c4;
+    font-size: 21px;
+    font-family: Arial, sans-serif;
+}
+
+.estatistica span {
+    color: #7f8798;
+    font-size: 9px;
+    font-family: Arial, sans-serif;
 }
