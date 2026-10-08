@@ -45,7 +45,6 @@ body {
     transition: 0.3s;
     background-color: rgba(211, 211, 211, 0.487);
 }
-
 #sobre-mim {
     background-color: #080f23;
     color: white;
@@ -84,14 +83,14 @@ body {
 }
 
 .texto h3 {
-    font-size: 14px;
+    font-size: 17px;
     margin: 0 0 18px;
     font-family: Arial, sans-serif;
 }
 
 .texto p {
     color: #9da4b5;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.7;
     margin: 0 0 14px;
     max-width: 780px;
@@ -107,17 +106,17 @@ body {
 .estatistica {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
 }
 
 .estatistica strong {
     color: #32e0c4;
-    font-size: 21px;
+    font-size: 23px;
     font-family: Arial, sans-serif;
 }
 
 .estatistica span {
     color: #7f8798;
-    font-size: 9px;
+    font-size: 11px;
     font-family: Arial, sans-serif;
 }
