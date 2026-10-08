@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #080f23;
 }
 
 #welcome {
@@ -46,7 +47,6 @@ body {
     background-color: rgba(211, 211, 211, 0.487);
 }
 #sobre-mim {
-    background-color: #080f23;
     color: white;
     padding: 40px;
     min-height: 300px;
@@ -119,4 +119,153 @@ body {
     color: #7f8798;
     font-size: 11px;
     font-family: Arial, sans-serif;
+}
+.tech-stack {
+    margin-top: 25px;
+}
+
+.tech-title {
+    font-size: 30px;
+    color: #d5d9e2;
+    border-bottom: 1px solid #343b44;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.tech-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.tech-category {
+    color: #c5ccd8;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 170px;
+    padding-top: 8px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tech {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.tech i {
+    font-size: 16px;
+}
+
+.java {
+    background-color: #e89500;
+}
+
+.python {
+    background-color: #3572a5;
+}
+
+.typescript {
+    background-color: #087db8;
+}
+
+.javascript {
+    background-color: #333333;
+}
+
+.kotlin {
+    background-color: #7849f5;
+}
+
+.dart {
+    background-color: #087db8;
+}
+
+.cpp {
+    background-color: #0065a8;
+}
+
+.flutter {
+    background-color: #168bc4;
+}
+
+.nestjs {
+    background-color: #e52b4d;
+}
+
+.node {
+    background-color: #5d9651;
+}
+
+.mongodb {
+    background-color: #3cae68;
+}
+
+.supabase {
+    background-color: #32b87d;
+}
+
+.mysql {
+    background-color: #477b98;
+}
+
+.firebase {
+    background-color: #c49a20;
+}
+
+.git {
+    background-color: #f04b38;
+}
+
+.github {
+    background-color: #111111;
+}
+
+.html {
+    background-color: #e65b32;
+}
+
+.css {
+    background-color: #1976b9;
+}
+
+.swift {
+    background-color: #f04b2f;
+}
+
+.npm {
+    background-color: #d63b3b;
+}
+
+.canva {
+    background-color: #00b9c5;
+}
+
+.blender {
+    background-color: #ef732f;
+}
+
+.unity {
+    background-color: #171717;
+}
+
+.unreal {
+    background-color: #222222;
+}
+
+#tech-stack-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
