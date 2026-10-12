@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Portfólio de Bernardo Orsi do Amaral — Desenvolvedor Full Stack especializado em aplicações web e mobile com dados reais.">
+    <title>Portfólio | Bernardo Orsi do Amaral</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
+
+    <header id="navbar">
+        <div class="navbar-inner">
+            <a href="#welcome" class="navbar-logo">Bernardo<span>.dev</span></a>
+
+            <nav class="navbar-links">
+                <a href="#sobre-mim" data-i18n="nav_sobre">Sobre Mim</a>
+                <a href="#projetos" data-i18n="nav_projetos">Projetos</a>
+                <a href="#experiencias" data-i18n="nav_exp">Experiências</a>
+                <a href="#contato" data-i18n="nav_contato">Contato</a>
+            </nav>
+
+            <button id="btn-lang" aria-label="Alternar idioma" title="Switch language">
+                <span id="lang-flag">🇧🇷</span> <span id="lang-label">PT</span>
+            </button>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu" id="mobile-menu">
+            <a href="#sobre-mim" data-i18n="nav_sobre">Sobre Mim</a>
+            <a href="#projetos" data-i18n="nav_projetos">Projetos</a>
+            <a href="#experiencias" data-i18n="nav_exp">Experiências</a>
+            <a href="#contato" data-i18n="nav_contato">Contato</a>
+        </nav>
+    </header>
+
     <section id="welcome">
         <img src="assets/boat.png" alt="fundo" id="fundo">
         <div id="presentation">
-            <h1>
-                Bernardo Orsi do Amaral
-            </h1>
-            <p id="desc">
-                Desenvolvedor Fullstack de aplicacoes web e mobile <br>
+            <h1>Bernardo Orsi do Amaral</h1>
+            <p id="desc" data-i18n="hero_desc">
+                Desenvolvedor Full Stack de aplicações web e mobile <br>
                 que usam dados reais e solucionam problemas.
             </p>
             <div id="row-buttons">
-                <div class="buttonIntro">Ver projetos</div>
-                <div class="buttonIntro">Contato</div>
+                <div class="buttonIntro" onclick="scrollParaProjetos()" data-i18n="hero_btn_proj">Ver projetos</div>
+                <div class="buttonIntro" onclick="scrollParaContato()" data-i18n="hero_btn_cont">Contato</div>
             </div>
         </div>
     </section>
     <section id="sobre-mim">
         <div class="container">
 
-            <h2>Quem sou eu:</h2>
+            <h2 data-i18n="sobre_titulo">Quem sou eu:</h2>
 
             <div class="sobre-conteudo">
 
@@ -39,32 +68,54 @@
 
                 <div class="texto">
 
-                    <h3>Opa! Sou o Bernardo, desenvolvedor Full Stack localizado no Brasil.</h3>
+                    <h3 data-i18n="sobre_sub">Opa! Sou o Bernardo, desenvolvedor Full Stack localizado no Brasil.</h3>
 
-                    <p>
-                        Tenho experiência na construção de aplicações web modernas,
-                        desde interfaces de usuário responsivas até APIs robustas.
-                        Gosto de resolver problemas complexos de forma elegante
-                        e sempre busco entregar software de alta
-                        qualidade que gere valor real para as pessoas.
-                    </p>
+                    <div class="lang-pt">
+                        <p>
+                            Estou cursando <strong>Ciência da Computação na PUC Minas</strong>, criando aplicações web e
+                            mobile que combinam
+                            interfaces responsivas com APIs robustas e dados reais.
+                        </p>
+                        <p>
+                            Tenho interesse especial em <strong>visualização de dados</strong>,
+                            aplicações de <strong>impacto real</strong> e novas tecnologias.
+                            Meu objetivo é crescer como engenheiro de software, contribuindo para
+                            soluções elegantes que gerem valor.
+                        </p>
+                        <p>
+                            Quando não estou programando, exploro novos frameworks e crio projetos.
+                            Acredito que boas soluções nascem da curiosidade e da colaboração.
+                        </p>
+                    </div>
 
-                    <p>
-                        Quando não estou programando, você me encontra navegando por
-                        tecnologias, explorando novos frameworks, criando projetos. Acredito que boas soluções
-                        nascem da curiosidade e da colaboração.
-                    </p>
+                    <div class="lang-en" style="display:none">
+                        <p>
+                            I'm studying <strong>Computer Science at PUC Minas</strong> , building web and mobile apps
+                            that combine responsive
+                            interfaces with robust APIs and real-world data.
+                        </p>
+                        <p>
+                            I'm especially interested in <strong>data visualization</strong>,
+                            <strong>high-impact applications</strong> and emerging technologies.
+                            My goal is to grow as a software engineer, contributing to elegant solutions
+                            that create real value.
+                        </p>
+                        <p>
+                            When I'm not coding, I explore new frameworks and build personal projects.
+                            I believe great solutions are born from curiosity and collaboration.
+                        </p>
+                    </div>
 
                     <div class="estatisticas">
 
                         <div class="estatistica">
                             <strong>2+</strong>
-                            <span>Anos de experiência</span>
+                            <span data-i18n="stat_anos">Anos de experiência</span>
                         </div>
 
                         <div class="estatistica">
                             <strong>18+</strong>
-                            <span>Tecnologias dominadas</span>
+                            <span data-i18n="stat_tech">Tecnologias dominadas</span>
                         </div>
 
                     </div>
@@ -75,155 +126,369 @@
     <section id="tech-stack-sec">
         <div class="tech-stack">
 
-                    <h3 class="tech-title">💻 Tech Stack:</h3>
+            <h3 class="tech-title">💻 Tech Stack:</h3>
 
-                    <div class="tech-section">
-                        <span class="tech-category">Principais:</span>
+            <div class="tech-section">
+                <span class="tech-category">Principais:</span>
 
-                        <div class="tech-list">
+                <div class="tech-list">
 
-                            <span class="tech java">
-                                <i class="devicon-java-plain"></i>
-                                JAVA
-                            </span>
+                    <span class="tech java">
+                        <i class="devicon-java-plain"></i>
+                        JAVA
+                    </span>
 
-                            <span class="tech python">
-                                <i class="devicon-python-plain"></i>
-                                PYTHON
-                            </span>
+                    <span class="tech python">
+                        <i class="devicon-python-plain"></i>
+                        PYTHON
+                    </span>
 
-                            <span class="tech typescript">
-                                <i class="devicon-typescript-plain"></i>
-                                TYPESCRIPT
-                            </span>
+                    <span class="tech typescript">
+                        <i class="devicon-typescript-plain"></i>
+                        TYPESCRIPT
+                    </span>
 
-                            <span class="tech javascript">
-                                <i class="devicon-javascript-plain"></i>
-                                JAVASCRIPT
-                            </span>
+                    <span class="tech javascript">
+                        <i class="devicon-javascript-plain"></i>
+                        JAVASCRIPT
+                    </span>
 
-                            <span class="tech kotlin">
-                                <i class="devicon-kotlin-plain"></i>
-                                KOTLIN
-                            </span>
+                    <span class="tech kotlin">
+                        <i class="devicon-kotlin-plain"></i>
+                        KOTLIN
+                    </span>
 
-                            <span class="tech dart">
-                                <i class="devicon-dart-plain"></i>
-                                DART
-                            </span>
+                    <span class="tech dart">
+                        <i class="devicon-dart-plain"></i>
+                        DART
+                    </span>
 
-                            <span class="tech cpp">
-                                <i class="devicon-cplusplus-plain"></i>
-                                C++
-                            </span>
+                    <span class="tech cpp">
+                        <i class="devicon-cplusplus-plain"></i>
+                        C++
+                    </span>
 
+                </div>
+            </div>
+
+
+            <div class="tech-section">
+                <span class="tech-category">Frameworks &amp; <br>Ferramentas:</span>
+
+                <div class="tech-list">
+
+                    <span class="tech flutter">
+                        <i class="devicon-flutter-plain"></i>
+                        FLUTTER
+                    </span>
+
+                    <span class="tech nestjs">
+                        <i class="devicon-nestjs-plain"></i>
+                        NESTJS
+                    </span>
+
+                    <span class="tech node">
+                        <i class="devicon-nodejs-plain"></i>
+                        NODE.JS
+                    </span>
+
+                    <span class="tech mongodb">
+                        <i class="devicon-mongodb-plain"></i>
+                        MONGODB
+                    </span>
+
+                    <span class="tech supabase">
+                        <i class="devicon-supabase-plain"></i>
+                        SUPABASE
+                    </span>
+
+                    <span class="tech mysql">
+                        <i class="devicon-mysql-plain"></i>
+                        MYSQL
+                    </span>
+
+                    <span class="tech firebase">
+                        <i class="devicon-firebase-plain"></i>
+                        FIREBASE
+                    </span>
+
+                    <span class="tech git">
+                        <i class="devicon-git-plain"></i>
+                        GIT
+                    </span>
+
+                    <span class="tech github">
+                        <i class="devicon-github-original"></i>
+                        GITHUB
+                    </span>
+
+                </div>
+            </div>
+
+
+            <div class="tech-section">
+                <span class="tech-category">Também conheço:</span>
+
+                <div class="tech-list">
+
+                    <span class="tech html">
+                        <i class="devicon-html5-plain"></i>
+                        HTML5
+                    </span>
+
+                    <span class="tech css">
+                        <i class="devicon-css3-plain"></i>
+                        CSS3
+                    </span>
+
+                    <span class="tech swift">
+                        <i class="devicon-swift-plain"></i>
+                        SWIFT
+                    </span>
+
+                    <span class="tech npm">
+                        <i class="devicon-npm-original-wordmark"></i>
+                        NPM
+                    </span>
+
+                    <span class="tech canva">
+                        CANVA
+                    </span>
+
+                    <span class="tech blender">
+                        <i class="devicon-blender-original"></i>
+                        BLENDER
+                    </span>
+
+                    <span class="tech unity">
+                        <i class="devicon-unity-plain"></i>
+                        UNITY
+                    </span>
+
+                    <span class="tech unreal">
+                        <i class="devicon-unrealengine-original"></i>
+                        UNREAL ENGINE
+                    </span>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projetos" class="secao">
+        <div class="secao-container">
+            <h2 class="secao-titulo" data-i18n="proj_titulo">Projetos:</h2>
+
+            <div class="proj-timeline">
+                <div class="proj-item">
+                    <div class="proj-marker">
+                        <div class="proj-dot"></div>
+                        <div class="proj-line"></div>
+                    </div>
+                    <article class="card-projeto">
+                        <div class="card-img">
+                            <img src="assets/tracker.png" alt="Marine Tracker desktop">
                         </div>
+                        <div class="card-corpo">
+                            <div class="card-tags">
+                                <span class="tag-categoria">Full Stack</span>
+                                <span class="tag-ano">2026</span>
+                            </div>
+                            <h3>Marine Tracker</h3>
+                            <p data-i18n="proj1_desc">
+                                Plataforma de visualização de dados reais (OBIS — Ocean Biodiversity
+                                Information System) sobre espécies marítimas. Painel interativo com mapa
+                                dinâmico e visualização de diversas estatísticas.
+                            </p>
+                            <ul class="card-stack">
+                                <li>Python</li>
+                                <li>Flet</li>
+                                <li>OBIS API</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="https://github.com/beorsi/MarineDispersionTracker" class="link-github"
+                                    target="_blank" rel="noopener">
+                                    <i class="devicon-github-original"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="proj-item">
+                    <div class="proj-marker">
+                        <div class="proj-dot proj-dot--wip"></div>
+                    </div>
+                    <article class="card-projeto">
+                        <div class="card-img card-img--wip">
+                            <img src="assets/conc.png" alt="App Flutter Concessionaria">
+                        </div>
+                        <div class="card-corpo">
+                            <div class="card-tags">
+                                <span class="tag-categoria">Mobile</span>
+                                <span class="tag-ano">2025</span>
+                            </div>
+                            <h3 data-i18n="proj2_titulo">Concessionaria desenvolvida em flutter</h3>
+                            <p data-i18n="proj2_desc">
+                                App mobile em desenvolvimento para demonstração de processos de concessionaria de
+                                veiculos.
+                            </p>
+                            <ul class="card-stack">
+                                <li>Flutter</li>
+                                <li>Dart</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="https://github.com/beorsi" class="link-github" target="_blank" rel="noopener">
+                                    <i class="devicon-github-original"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencias" class="secao">
+        <div class="secao-container">
+            <h2 class="secao-titulo">Experiências / Tecnologias</h2>
+
+            <div class="exp-grid">
+
+                <div class="exp-coluna">
+                    <h3 class="exp-subtitulo">Trajetória Profissional</h3>
+
+                    <ol class="timeline">
+                        <li class="timeline-item ativo">
+                            <h4>Estagiário de TI</h4>
+                            <span class="timeline-empresa">Pimenta de Ávila · Jul 2024 – Abr 2025</span>
+                            <p>
+                                Suporte técnico, resolvendo problemas relacionados a hardware <br>
+                                e softwares de geotecnia, auxiliando as equipes técnicas. Cadastro <br>
+                                de usuários e permissões de acesso no servidor.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="exp-coluna">
+                    <h3 class="exp-subtitulo">Stack de Tecnologias</h3>
+
+                    <div class="stack-grupo">
+                        <span class="stack-categoria">Front-end</span>
+                        <ul class="stack-lista">
+                            <li>React</li>
+                            <li>Next.js</li>
+                            <li>TypeScript</li>
+
+                        </ul>
                     </div>
 
-
-                    <div class="tech-section">
-                        <span class="tech-category">Frameworks &amp; <br>Ferramentas:</span>
-
-                        <div class="tech-list">
-
-                            <span class="tech flutter">
-                                <i class="devicon-flutter-plain"></i>
-                                FLUTTER
-                            </span>
-
-                            <span class="tech nestjs">
-                                <i class="devicon-nestjs-plain"></i>
-                                NESTJS
-                            </span>
-
-                            <span class="tech node">
-                                <i class="devicon-nodejs-plain"></i>
-                                NODE.JS
-                            </span>
-
-                            <span class="tech mongodb">
-                                <i class="devicon-mongodb-plain"></i>
-                                MONGODB
-                            </span>
-
-                            <span class="tech supabase">
-                                <i class="devicon-supabase-plain"></i>
-                                SUPABASE
-                            </span>
-
-                            <span class="tech mysql">
-                                <i class="devicon-mysql-plain"></i>
-                                MYSQL
-                            </span>
-
-                            <span class="tech firebase">
-                                <i class="devicon-firebase-plain"></i>
-                                FIREBASE
-                            </span>
-
-                            <span class="tech git">
-                                <i class="devicon-git-plain"></i>
-                                GIT
-                            </span>
-
-                            <span class="tech github">
-                                <i class="devicon-github-original"></i>
-                                GITHUB
-                            </span>
-
-                        </div>
+                    <div class="stack-grupo">
+                        <span class="stack-categoria">Back-end</span>
+                        <ul class="stack-lista">
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>FastAPI</li>
+                        </ul>
                     </div>
 
-
-                    <div class="tech-section">
-                        <span class="tech-category">Tambem conheco:</span>
-
-                        <div class="tech-list">
-
-                            <span class="tech html">
-                                <i class="devicon-html5-plain"></i>
-                                HTML5
-                            </span>
-
-                            <span class="tech css">
-                                <i class="devicon-css3-plain"></i>
-                                CSS3
-                            </span>
-
-                            <span class="tech swift">
-                                <i class="devicon-swift-plain"></i>
-                                SWIFT
-                            </span>
-
-                            <span class="tech npm">
-                                <i class="devicon-npm-original-wordmark"></i>
-                                NPM
-                            </span>
-
-                            <span class="tech canva">
-                                CANVA
-                            </span>
-
-                            <span class="tech blender">
-                                <i class="devicon-blender-original"></i>
-                                BLENDER
-                            </span>
-
-                            <span class="tech unity">
-                                <i class="devicon-unity-plain"></i>
-                                UNITY
-                            </span>
-
-                            <span class="tech unreal">
-                                <i class="devicon-unrealengine-original"></i>
-                                UNREAL ENGINE
-                            </span>
-
-                        </div>
+                    <div class="stack-grupo">
+                        <span class="stack-categoria">Banco de Dados</span>
+                        <ul class="stack-lista">
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                            <li>Firebase</li>
+                        </ul>
                     </div>
 
                 </div>
+
+            </div>
+        </div>
     </section>
+
+    <section id="contato" class="secao">
+        <div class="secao-container">
+            <h2 class="secao-titulo">Contato</h2>
+
+            <div class="contato-grid">
+
+                <div class="contato-info">
+                    <h3>Vamos construir algo incrível juntos?</h3>
+                    <p>
+                        Estou sempre aberto a novos projetos, parcerias e oportunidades. Se
+                        você tem uma ideia ou precisa de um desenvolvedor experiente para o
+                        seu time, entre em contato!
+                    </p>
+
+                    <ul class="contato-lista">
+                        <!-- E-mail -->
+                        <li>
+                            <span class="contato-icone">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                    <path d="M3 7l9 6 9-6"></path>
+                                </svg>
+                            </span>
+                            <a href="mailto:beorsi10@gmail.com">beorsi10@gmail.com</a>
+                        </li>
+                        <!-- WhatsApp -->
+                        <li>
+                            <span class="contato-icone contato-icone--whatsapp">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                            </span>
+                            <!-- TODO: Substitua SEU_NUMERO pelo número no formato 5531XXXXXXXXX -->
+                            <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener">WhatsApp</a>
+                        </li>
+                        <!-- LinkedIn -->
+                        <li>
+                            <span class="contato-icone"><i class="devicon-linkedin-plain"></i></span>
+                            <a href="https://www.linkedin.com/in/bernardo-orsi-do-amaral-5242ba336/" target="_blank"
+                                rel="noopener">bernardo-orsi-do-amaral</a>
+                        </li>
+                        <!-- GitHub -->
+                        <li>
+                            <span class="contato-icone"><i class="devicon-github-original"></i></span>
+                            <a href="https://github.com/beorsi" target="_blank" rel="noopener">github.com/beorsi</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contato-form" id="form-contato" action="https://formspree.io/f/xppqjoqn" method="POST">
+                    <h3>Enviar mensagem</h3>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"
+                        placeholder="Conte sobre seu projeto ou oportunidade..." required></textarea>
+
+                    <button type="submit" id="btn-enviar">Enviar Mensagem</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="rodape">
+        <div class="secao-container rodape-conteudo">
+            <span>© 2026 Bernardo Orsi do Amaral. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
