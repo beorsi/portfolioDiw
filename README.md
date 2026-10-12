@@ -20,16 +20,23 @@ Portfólio pessoal desenvolvido como projeto acadêmico para a disciplina de Des
 
 ---
 
+## 🎨 Design & Wireframes
+
+- **Protótipo / Wireframe no Figma:** [Acessar no Figma](https://www.figma.com/design/qynbFLLQHbSROGNvqeXP1T/Portfolio?node-id=0-1&t=r934ocdgPjezsB3j-1)
+
+---
+
 ## 🧱 Tecnologias Utilizadas
 
 | Camada    | Tecnologia                         |
 |-----------|------------------------------------|
+| Design    | [Figma](https://www.figma.com/design/qynbFLLQHbSROGNvqeXP1T/Portfolio?node-id=0-1&t=r934ocdgPjezsB3j-1) |
 | Estrutura | HTML5 semântico                    |
-| Estilo    | CSS3      |
-| Lógica    | JavaScript |
+| Estilo    | CSS3                               |
+| Lógica    | JavaScript                         |
 | Ícones    | [Devicon CDN](https://devicon.dev/)|
 | Formulário| [Formspree](https://formspree.io/) |
-| Deploy    | Github pages
+| Deploy    | GitHub Pages                       |
 
 ---
 
@@ -77,14 +84,6 @@ portfolioDiw/
 | Plataforma | URL |
 |------------|-----|
 | GitHub Pages / Vercel / Render | _em breve_ |
-
----
-
-
-
-## 📸 Screenshots
-
-> *(Adicionar screenshots do portfólio aqui)*
 
 ---
 
