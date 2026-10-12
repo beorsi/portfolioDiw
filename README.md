@@ -79,8 +79,8 @@ portfolioDiw/
 
 ## 🌐 Deploy
 
-| Plataforma | URL |
-|Github pages|beorsi.github.io/portfolioDiw/|
+
+|Github pages | beorsi.github.io/portfolioDiw/|
 
 ---
 
