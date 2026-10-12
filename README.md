@@ -79,11 +79,8 @@ portfolioDiw/
 
 ## 🌐 Deploy
 
-> _(Preencher após o deploy — Lab01S03)_
-
 | Plataforma | URL |
-|------------|-----|
-| GitHub Pages / Vercel / Render | _em breve_ |
+|Github pages|beorsi.github.io/portfolioDiw/|
 
 ---
 
